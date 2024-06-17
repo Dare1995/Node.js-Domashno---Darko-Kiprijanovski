@@ -26,7 +26,7 @@ const students = [
         grade = 'F';
       }
   
-      results.push({name:student.name, grade:grade});
+      results.push({name: student.name, grade: grade});
     });
   
     return results;
