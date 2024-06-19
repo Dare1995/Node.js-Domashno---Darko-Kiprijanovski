@@ -62,10 +62,9 @@ const podredeniGradovi = grupenProsek
   .map(({ grad, sum, num }) => ({ grad, prosek: sum / num }))
   .sort((a, b) => b.prosek - a.prosek);
 
-// podredeniGradovi.forEach(({ grad, prosek }) => {
-//   console.log(`Град: ${grad}, Просек: ${prosek.toFixed(2)}`);
-// });
-
+podredeniGradovi.forEach(({ grad, prosek }) => {
+  console.log(`Град: ${grad}, Просек: ${prosek.toFixed(2)}`);
+});
 
 
 // 5. Вкупен просек на студенти чие име завршува на а наспроти сите останати.
