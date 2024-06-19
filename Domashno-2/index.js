@@ -39,10 +39,10 @@ const averageScoreNine = studenti
 // Првите 3 студенти кои имаат имиња од 5 карактери, подредени по просек.
 const firstThreeStudents = studenti
   .filter(student => student.ime.length === 5)
-  .sort((a, b) => a.prosek - b.prosek)
+  .sort((a, b) => b.prosek - a.prosek)
   .slice(0, 3);
 
-// console.log(firstThreeStudents)
+// console.log(firstThreeStudents) // opagjachki redosled
 
 
 
@@ -53,7 +53,7 @@ const grupenProsek = studenti.reduce((acc, student) => {
     grad.sum += student.prosek;
     grad.num++;
   } else {
-    acc.push({ grad: student.grad, sum: student.prosek, num: 1});
+    acc.push({ grad: student.grad, sum: student.prosek, num: 1 });
   }
   return acc;
 }, []);
@@ -62,9 +62,9 @@ const podredeniGradovi = grupenProsek
   .map(({ grad, sum, num }) => ({ grad, prosek: sum / num }))
   .sort((a, b) => b.prosek - a.prosek);
 
-podredeniGradovi.forEach(({ grad, prosek }) => {
-  console.log(`Град: ${grad}, Просек: ${prosek.toFixed(2)}`);
-});
+// podredeniGradovi.forEach(({ grad, prosek }) => {
+//   console.log(`Град: ${grad}, Просек: ${prosek.toFixed(2)}`);
+// });
 
 
 // 5. Вкупен просек на студенти чие име завршува на а наспроти сите останати.
