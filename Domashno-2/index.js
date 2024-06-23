@@ -68,23 +68,39 @@ const podredeniGradovi = grupenProsek
 
 
 // 5. Вкупен просек на студенти чие име завршува на а наспроти сите останати.
-let sumA = 0;
-let countA = 0;
-let sumOthers = 0;
-let countOthers = 0;
+// let sumA = 0;
+// let countA = 0;
+// let sumOthers = 0;
+// let countOthers = 0;
 
-studenti.forEach(student => {
-  if (student.ime.endsWith("a")) {
-    sumA += student.prosek;
-    countA++;
-  } else {
-    sumOthers += student.prosek;
-    countOthers++;
-  }
-});
+// studenti.forEach(student => {
+//   if (student.ime.endsWith("a")) {
+//     sumA += student.prosek;
+//     countA++;
+//   } else {
+//     sumOthers += student.prosek;
+//     countOthers++;
+//   }
+// });
 
-const averageScoreWithA = countA > 0 ? sumA / countA : 0;
-const averageScoreOthers = countOthers > 0 ? sumOthers / countOthers : 0;
+// const averageScoreWithA = countA > 0 ? sumA / countA : 0;
+// const averageScoreOthers = countOthers > 0 ? sumOthers / countOthers : 0;
 
 // console.log("Вкупен просек за студенти чие име завршува на 'a':", averageScoreWithA);
 // console.log("Вкупен просек за сите други студенти:", averageScoreOthers.toFixed(2));
+
+const calculateAverage = students => {
+  const totalProsek = students.reduce((sum, student) => sum + student.prosek, 0);
+  return totalProsek / students.length;
+};
+
+const endsWithA = studenti.filter(student => student.ime.endsWith('a'));
+
+const doesNotEndWithA = studenti.filter(student => !student.ime.endsWith('a'));
+
+const averageScoreWithA = calculateAverage(endsWithA);
+const averageScoreOthers = calculateAverage(doesNotEndWithA);
+
+console.log(`Average grade of students whose names end with 'a': ${averageScoreWithA}`);
+console.log(`Average grade of students whose names do not end with 'a': ${averageScoreOthers.toFixed(2)}`);
+
