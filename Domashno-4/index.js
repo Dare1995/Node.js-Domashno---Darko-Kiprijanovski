@@ -31,6 +31,9 @@ let result = "";
 }
 
 const newServer = http.createServer(handler);
-newServer.listen(10000);
+newServer.listen(10000, () => {
+  console.log("Server is listening on port 10000");
+});
+
 
 
