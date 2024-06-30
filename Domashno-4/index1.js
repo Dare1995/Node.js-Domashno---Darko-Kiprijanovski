@@ -2,6 +2,7 @@
 //  Pr. url : /celsiustofahr/10
 
 const http = require("http");
+
 const {
     convertMilesToKm,
     convertCelsiusToFahrenheit,
@@ -15,7 +16,7 @@ const {
     
         const [, operacija, num] = req.url.split("/");
     
-        //The parseFloat() function parses a string argument and returns a floating point number
+        //parseFloat = convert a string to a floating-point number
         let result = "";
         switch (operacija) {
             case "milestokm":
