@@ -7,7 +7,7 @@ const {
     welcome,
     userEmailLogin,
     invalidUserEmail,
-} = require("./handler/handler");
+} = require("./handlers/handler");
 
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
