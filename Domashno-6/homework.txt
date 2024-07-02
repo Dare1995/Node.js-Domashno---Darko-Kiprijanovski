@@ -1,0 +1,3 @@
+Prepisete ja prethodnata domasna so express aplikacija
+
+*Potsetete se na read i write so file sistemot
