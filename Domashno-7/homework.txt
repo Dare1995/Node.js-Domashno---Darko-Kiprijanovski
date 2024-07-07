@@ -1,0 +1,6 @@
+1. Update metodot da go dopolnite za ovoj chas 7
+2. Izbrabotete aplikacija za cuvanje na recepti
+    - GET - zemete gi site recepti od data.json
+    - POST - napravete nov recept i zacuvajte go vo data.json
+    - PUT - azurarjte odreden recept
+    - DELETE - izbrisete nekoj recept
