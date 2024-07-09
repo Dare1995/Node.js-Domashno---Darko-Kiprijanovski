@@ -58,11 +58,9 @@ const parseTemplate = async (template, data = {}) => {
                 if (data) {
                     console.log("data", data);
                     for (d in data) {
-
-                        console.log("d", d);
-
-
-                        content = content.replace(`{{${d}}}`, data[d]);
+                        
+                    console.log("d", d);
+                    content = content.replace(`{{${d}}}`, data[d]);
                     }
                 }
 
