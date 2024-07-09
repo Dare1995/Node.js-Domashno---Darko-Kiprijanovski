@@ -13,7 +13,6 @@ const getRecipe = async (req, res) => {
 const postRecipe = async (req, res) => {
     const { ingredientOne, ingredientTwo, operation } = req.body;
 
-    // Check if ingredients are provided and are not empty strings
     if (!ingredientOne || !ingredientTwo) {
         return res.status(400).send("Invalid input!");
     }
@@ -58,9 +57,9 @@ const parseTemplate = async (template, data = {}) => {
                 if (data) {
                     console.log("data", data);
                     for (d in data) {
-                        
-                    console.log("d", d);
-                    content = content.replace(`{{${d}}}`, data[d]);
+
+                        console.log("d", d);
+                        content = content.replace(`{{${d}}}`, data[d]);
                     }
                 }
 
