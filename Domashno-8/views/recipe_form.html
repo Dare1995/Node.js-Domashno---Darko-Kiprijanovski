@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+</head>
+<body>
+    <h1>Recipe Form</h1>
+    <form action="/recipe" method="post">
+        <label for="ingredientOne">Ingredient One:</label>
+        <input type="text" id="ingredientOne" name="ingredientOne" required>
+        <br>
+        <br>
+        <label for="ingredientTwo">Ingredient Two:</label>
+        <input type="text" id="ingredientTwo" name="ingredientTwo" required>
+        <br>
+        <br>
+        <label for="operation">Operation:</label>
+        <select id="operation" name="operation" required>
+            <option value="grill">Grill</option>
+            <option value="sear">Sear</option>
+            <option value="simmer">Simmer</option>
+            <option value="boil">Boil</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
