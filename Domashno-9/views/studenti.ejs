@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+  <h2>Список на студенти</h2>
+  <table border="1" width="25%">
+    <thead>
+      <tr>
+        <th>Име</th>
+        <th>Презиме</th>
+        <th>Просек</th>
+        <th>Акција</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% studenti.forEach((student, index)=> { %>
+        <tr>
+          <td>
+            <%= student.ime %>
+          </td>
+          <td>
+            <%= student.prezime %>
+          </td>
+          <td>
+            <%= student.prosek %>
+          </td>
+          <td><a href="/brishi?i=<%= index %>">Бриши</a></td>
+        </tr>
+        <% }); %>
+    </tbody>
+  </table>
