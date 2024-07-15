@@ -37,7 +37,7 @@ const getStudenti = async (req, res) => {
 };
 
 const getBrishi = async (req, res) => {
-  const index = Number(req.query.i, 10);
+  const index = Number(req.query.i);
   const studenti = await readData();
 
   if (!isNaN(index) && studenti[index]) {
