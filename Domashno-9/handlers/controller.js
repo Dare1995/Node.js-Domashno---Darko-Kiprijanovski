@@ -1,7 +1,7 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-const dataFilePath = path.join(__dirname, '..', 'studenti.json');
+const dataFilePath = path.join(__dirname, '../studenti.json');
 
 async function readData() {
   try {
